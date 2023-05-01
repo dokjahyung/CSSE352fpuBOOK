@@ -12,10 +12,18 @@
     padding: 20px;
     color: white;
 }
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    }
 body{
-
+ height: 100%;
+ 
+ 
 }
-button{
+button, input[type=submit]{
     float: left;
     position: relative;
     display: block;
@@ -30,6 +38,7 @@ button{
     color: white;
 }
 
+
 table {
 	width:100%;
 	border: 1px solid black;
@@ -38,4 +47,7 @@ table {
 
 input[type=text] {
 	width:100%;
+}
+p{
+    text-align: center;
 }
