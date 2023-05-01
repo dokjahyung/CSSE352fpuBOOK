@@ -6,19 +6,107 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<!-- connecting the CSS sheet -->
+	<link rel="stylesheet" href="styles.css">
+	
 	<!-- giving the title of the program -->
 	<title>Room Reservation Form</title>
-	
 	
 </head>
 <body>
 	
+	<!-- setting up the header bar, with the home button and profile button -->
+	<div class = "top-bar">
+        <button class = "button" >Home</button>
+        <button class = "button" style = "left: 85%;">Profile</button>
+    </div>
+	
+	<!-- the title for the page that is visible to the user-->
+	<h1>Room Reservation Form for </h1>				<!-- need figure out how to put the room number in here -->
 	
 	
+	<!-- this table divides the info section of teh room into the textual information and the floor plan -->
+	<table>
+		<tr>
+			<td style="width:50%"> <!-- this makes sure the halfway point for the text and picture is the middle of the page -->
+				<!-- this table helps display the textual information for the room -->
+				<table>
+					<tr>
+						<!-- section for displaying room name -->
+						<td><h4>Room Name:</h4></td>
+						<td><label id="RoomName">101</label></td>
+					</tr>
+					<tr>
+						<!-- section for displaying room location -->
+						<td><h4>Location:</h4></td>
+						<td><label id="RoomLocation">Marpeck</label></td>
+					</tr>
+					<tr>
+						<!-- section for displaying room size -->
+						<td><h4>Size:</h4></td>
+						<td><label id="RoomSize">1000 sqft</label></td>
+					</tr>
+					<tr>
+						<!-- section for displaying room occupancy limit -->
+						<td><h4>Occupancy:</h4></td>
+						<td><label id="RoomOcc">40</label></td>
+					</tr>
+					<tr>
+						<!-- section for displaying room ammenities -->
+						<td><h4>Ammenities:</h4></td>
+						<td><label id="RoomAmm">This room has a variety of features. It has chairs and desks for all students. It has a white board and projector. It has a computer for the teacher to use. It is enabled with video conferencing and zoom recording.</label></td>
+					</tr>
+				</table>
+			</td>
+			<!-- this is where a floor plan of the room will be displayed -->
+			<td style="width:50%">
+				<label>This is where a diagram of the room goes</label>
+			</td>
+		</tr>
+	
+	</table>
 	
 	
+	<!-- telling the user the instructions for the requests for admin section -->
+	<h3>Please check the following boxes if you would like to get approval from an admin:</h3>
 	
 	
+	<!-- this form is used to gather requests to be sent to the admin -->
+	<form>
+		<table>
+			<tr>
+				<!-- Request section for Ammenities -->
+				<td><input type="checkbox" id="AmmReqCb"></td>
+				<td><label>Request for Ammenities:</label></td>
+				<td style="width:70%"><input type="text" id="AmmReqTx"></td>
+			</tr>
+			<tr>
+				<!-- Request section for Recurring Reservations -->
+				<td><input type="checkbox" id="RecurReqCb"></td>
+				<td><label>Request for Recurring Reservation:</label></td>
+				<td><input type="text" id="RecurReqTx"></td>
+			</tr>
+			<tr>
+				<!-- Request section for a Conflict Priority Review -->
+				<td><input type="checkbox" id="ConReqCb"></td>
+				<td><label>Request for Conflict Priority:</label></td>
+				<td><input type="text" id="ConReqTx"></td>
+			</tr>
+		</table>
+	</form>
+	
+	
+	<!-- br element for more space between form and button-->
+	<br>
+	
+	<!-- this button will submit the form to the database, and then take the user back to the View Room Availability -->
+	<input type="button" value="Submit" id="submitButton" style="display: block; margin-left: auto; margin-right: auto;" onclick="">
+	
+	
+	<!-- things to figure out in JS: 
+		how to get the room location and number in the header at the top of the page
+		how to change out all of the values in the textual display table
+	-->
 </body>
 </html>
 	
